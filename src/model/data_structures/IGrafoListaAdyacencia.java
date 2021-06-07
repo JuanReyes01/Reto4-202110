@@ -10,7 +10,7 @@ public interface IGrafoListaAdyacencia<K extends Comparable<K> ,V> {
 	Vertex<K,V> getVertex(K id);
 	Edge<K,V> getEdge(K idS, K idD);
 	ILista<Edge<K,V>> adjacentEdges(K id);
-	void adjacentVertex(K id);
+	ILista<Vertex<K,V>> adjacentVertex(K id);
 	int indegree(K vertex);
 	int outdegree(K vertex);
 	ILista<Edge<K,V>> edges();

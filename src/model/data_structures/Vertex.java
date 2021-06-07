@@ -84,5 +84,12 @@ public class Vertex<K extends Comparable<K>, V> implements IVertex<K, V>{
 		// TODO Auto-generated method stub
 		
 	}
-
+	
+	public void setValue(V v){
+		this.value = v;
+	}
+	
+	public int compareTo(K o){
+		return o.compareTo(id);
+	}
 }
