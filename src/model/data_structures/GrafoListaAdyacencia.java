@@ -67,15 +67,15 @@ public class GrafoListaAdyacencia<K extends Comparable<K>, V> implements IGrafoL
 		return edges;
 	}
 
-	public Vertex<K,V> adjacentVertex(K id) {
-		// TODO Auto-generated method stub
-		
+	public ILista<Vertex<K,V>> adjacentVertex(K id) {
+		ArregloDinamico<Vertex<K, V>> vertex = (ArregloDinamico<Vertex<K,V>>) vertices.get(id).vertices();
+		return vertex;
 	}
 
 	@Override
 	public int indegree(K vertex) {
-		// TODO Auto-generated method stub
-		return 0;
+		ArregloDinamico<Edge<K, V>> edges = (ArregloDinamico<Edge<K, V>>) vertices.get(id).edges();
+		return edges.size();
 	}
 
 	@Override
